@@ -136,7 +136,7 @@ app.post('/emails', urlencodedParser, async function (req, res,) {
 
   var updateArray = []
   console.log(data.emails)
-  updateArray.push(data.emails);
+  updateArray.push([new Date().toLocaleDateString(), ...data.emails]);
 
   console.log(updateArray)
 
